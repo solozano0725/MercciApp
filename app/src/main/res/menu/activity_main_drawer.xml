@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_inicio"
+            android:title="@string/inicio" />
+        <item
+            android:id="@+id/nav_promociones"
+            android:icon="@drawable/ic_promocion"
+            android:title="@string/promociones" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/nueva_coleccion">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_bolsos"
+                    android:icon="@drawable/bolso"
+                    android:title="@string/bolsos" />
+                <item
+                    android:id="@+id/nav_carteras"
+                    android:icon="@drawable/cartera"
+                    android:title="@string/carteras" />
+                <item
+                    android:id="@+id/nav_cinturones"
+                    android:icon="@drawable/cinturon"
+                    android:title="@string/cinturones" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_nosotros"
+            android:icon="@drawable/ic_nosotros"
+            android:title="@string/nosotros" />
+    </group>
+
+</menu>

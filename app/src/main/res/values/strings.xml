@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Mercci</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="subBar">COMPLEMENT</string>
+
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+
+    <string name="subtitle">Si no posee una cuenta, lo invitamos a</string>
+
+    <string name="inicio">Inicio</string>
+    <string name="nueva_coleccion">Nueva Colección</string>
+    <string name="bolsos">Bolsos</string>
+    <string name="carteras">Carteras</string>
+    <string name="cinturones">Cinturones</string>
+    <string name="nosotros">Nosotros</string>
+    <string name="promociones">Promociones</string>
+    <string name="redes_sociales">Redes Sociales</string>
+    <string name="mensajes">Mensajes</string>
+    <string name="facebook">Facebook</string>
+    <string name="instagram">Instagram</string>
+    <string name="youtube">YouTube</string>
+    <string name="siguenos">Siguenos en Instagram</string>
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="registro">¡Registrarse!</string>
+    <string name="hola">¡Bienvenido a Mercci!</string>
+
+    <string name="registrar">¡Registrarte aqui!</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo">Correo</string>
+    <string name="direccion">Direccion</string>
+    <string name="celular">Celular</string>
+    <string name="contrasenaa">Repetir Contraseña</string>
+
+    <string name="emptytext">No puede haber campo vacíos en los datos solicitados.</string>
+    <string name="passdifer">Las contraseñas ingresadas son diferentes.</string>
+    <string name="success">Has sido registrado correctamente, te invitamos a iniciar sesion.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
