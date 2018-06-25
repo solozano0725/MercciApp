@@ -1,5 +1,7 @@
 package complement.merci.app.mercciapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -7,14 +9,28 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+
+import com.valdesekamdem.library.mdtoast.MDToast;
+
+import complement.merci.app.mercciapp.Main.RVMain;
+import complement.merci.app.mercciapp.Promo.FragmentPromociones;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     int count = 0;
+
+    ImageView imgF, imgI, imgE, imgW;
+    MDToast mdToast;
+    RecyclerView rv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +46,54 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        imgF = findViewById(R.id.imgFacebook);
+        imgI = findViewById(R.id.imgInstagram);
+        imgW = findViewById(R.id.imgWeb);
+        imgE = findViewById(R.id.imgEmail);
+
+        rv = findViewById(R.id.rvM);
+        rv.setAdapter(new RVMain(getApplicationContext()));
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+
+        imgF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.face))));
+            }
+        });
+
+        imgI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.ig))));
+            }
+        });
+
+        imgW.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.web))));
+            }
+        });
+
+        imgE.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_SENDTO);
+                i.setData(Uri.parse("mailto:"+getString(R.string.email)));
+                try{
+                    startActivity(i);
+                } catch(android.content.ActivityNotFoundException ex){
+                    MDToast mdToast = MDToast.makeText(getApplicationContext(), getString(R.string.prox), MDToast.LENGTH_SHORT, MDToast.TYPE_INFO);
+                    mdToast.show();
+                }
+            }
+        });
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -66,9 +129,7 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
 
         if (id == R.id.nav_inicio) {
-            for(int i = 0; i < getSupportFragmentManager().getBackStackEntryCount(); ++i) {
-                getSupportFragmentManager().popBackStack();
-            }
+            count = 0;
         } else if (id == R.id.nav_bolsos) {
             count++;
             fragment = new FragmentBolsos();
@@ -86,16 +147,17 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentNosotros();
         }
 
-        if(count>0){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).addToBackStack(null).commit();
-        } else{
+        if(count==0){
+            startActivity(new Intent(MainActivity.this, MainActivity.class));
+        } else if(count==1){
             getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).addToBackStack(null).commit();
+        } else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 }

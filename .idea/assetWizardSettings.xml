@@ -78,11 +78,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="612" />
-                            <entry key="outputName" value="ic_nosotros" />
+                            <entry key="height" value="84" />
+                            <entry key="outputName" value="ic_email" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Sol Mayra\Downloads\mujer-de-negocios.psd" />
-                            <entry key="width" value="369" />
+                            <entry key="sourceFile" value="C:\Users\Sol Mayra\Downloads\close-envelope.psd" />
+                            <entry key="width" value="90" />
                           </map>
                         </option>
                       </PersistentState>

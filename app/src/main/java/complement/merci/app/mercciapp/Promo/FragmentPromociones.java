@@ -1,4 +1,4 @@
-package complement.merci.app.mercciapp;
+package complement.merci.app.mercciapp.Promo;
 
 
 import android.os.Bundle;
@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import complement.merci.app.mercciapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class FragmentPromociones extends Fragment {
 
     RecyclerView rv;
+
     public FragmentPromociones() {
         // Required empty public constructor
     }
@@ -24,7 +24,7 @@ public class FragmentPromociones extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fragment_promociones, container, false);
-        rv = view.findViewById(R.id.rv);
+        rv = view.findViewById(R.id.rvP);
         return view;
     }
 
