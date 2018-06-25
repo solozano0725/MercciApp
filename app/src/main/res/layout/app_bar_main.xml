@@ -27,8 +27,9 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:gravity="right"
                 android:orientation="vertical"
                 android:padding="5dp">
 
@@ -58,7 +59,6 @@
     </android.support.design.widget.AppBarLayout>
 
     <include
-        android:id="@+id/content_main"
         layout="@layout/content_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

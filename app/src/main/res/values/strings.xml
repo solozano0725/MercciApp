@@ -19,6 +19,7 @@
     <string name="cinturones">Cinturones</string>
     <string name="nosotros">Nosotros</string>
     <string name="promociones">Promociones</string>
+    <string name="promocionesdescuentos">Promociones y Descuentos</string>
     <string name="redes_sociales">Redes Sociales</string>
     <string name="mensajes">Mensajes</string>
     <string name="facebook">Facebook</string>
@@ -55,6 +56,43 @@
         <item>DESCUENTOS EXCLUSIVOS</item>
         <item>SIGUENOS EN INSTAGRAM</item>
     </string-array>
+
+    <string name="txtMision">Misión</string>
+    <string name="txtTextMision">MERCCI es una marca dedicada al diseño, producción y comercialización de productos de marroquinería como bolsos, carteras y cinturones, dirigido a un público femenino   vanguardista y elegante, se caracteriza por tener un talento humano especializado, enfocado en ofrecer la más alta calidad, generando productos exclusivos que van de la mano con las nuevas tendencias</string>
+    <string name="txtVision">Visión</string>
+    <string name="txtTextVision">Contar con puntos de ventas directos en la ciudad de Barranquilla, Será una marca con posicionamiento y prestigio en el mercado colombiano, reconocida por sus productos innovadores, con calidad y diseño.</string>
+
+    <string-array name="titleBolsos">
+        <item>Bolso Polim</item>
+        <item>Bolso Naus</item>
+    </string-array>
+    <string-array name="subBolsos">
+        <item>$81.000,00 COP</item>
+        <item>$251.000,00 COP</item>
+    </string-array>
+
+    <string-array name="titleCarteras">
+        <item>Cartera Polim</item>
+        <item>Cartera Naus</item>
+    </string-array>
+    <string-array name="subCarteras">
+        <item>$151.000,00 COP</item>
+        <item>$62.000,00 COP</item>
+    </string-array>
+
+    <string-array name="titleCinturon">
+        <item>Cinturon  Polim</item>
+        <item>Cinturon  Polim</item>
+    </string-array>
+    <string-array name="subTCinturon">
+        <item>Plateado</item>
+        <item>Azul Turqui</item>
+    </string-array>
+    <string-array name="subCinturon">
+        <item>$30.000,00 COP</item>
+        <item>$61.000,00 COP</item>
+    </string-array>
+
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

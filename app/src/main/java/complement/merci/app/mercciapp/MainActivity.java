@@ -19,6 +19,8 @@ import android.widget.ImageView;
 
 import com.valdesekamdem.library.mdtoast.MDToast;
 
+import complement.merci.app.mercciapp.BolsosCarteras.FragmentBolsos;
+import complement.merci.app.mercciapp.BolsosCarteras.FragmentCarteras;
 import complement.merci.app.mercciapp.Main.RVMain;
 import complement.merci.app.mercciapp.Promo.FragmentPromociones;
 
@@ -128,9 +130,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         Fragment fragment = null;
 
-        if (id == R.id.nav_inicio) {
-            count = 0;
-        } else if (id == R.id.nav_bolsos) {
+        if (id == R.id.nav_bolsos) {
             count++;
             fragment = new FragmentBolsos();
         } else if (id == R.id.nav_carteras) {
@@ -147,12 +147,10 @@ public class MainActivity extends AppCompatActivity
             fragment = new FragmentNosotros();
         }
 
-        if(count==0){
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
-        } else if(count==1){
-            getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).addToBackStack(null).commit();
-        } else{
+        if(count>0){
             getSupportFragmentManager().beginTransaction().replace(R.id.content_main, fragment).addToBackStack(null).commit();
+        } else{
+            getSupportFragmentManager().beginTransaction().add(R.id.content_main, fragment).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

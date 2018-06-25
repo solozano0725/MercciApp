@@ -14,12 +14,9 @@ public class RVPromo extends RecyclerView.Adapter<VHPromo> implements View.OnCli
     LayoutInflater inflater;
     Context context;
     View.OnClickListener listener;
-    int[] drawables;
 
-
-    public RVPromo(Context c, int[] arrayDrawables){
+    public RVPromo(Context c){
         this.context = c;
-        this.drawables = arrayDrawables;
         inflater=LayoutInflater.from(context);
     }
 
@@ -33,12 +30,19 @@ public class RVPromo extends RecyclerView.Adapter<VHPromo> implements View.OnCli
 
     @Override
     public void onBindViewHolder(@NonNull VHPromo holder, int position) {
-        holder.imageView.setImageResource(drawables[position]);
+        switch (position){
+            case 0:
+                holder.imageView.setImageResource(R.drawable.promo1);
+                break;
+            case 1:
+                holder.imageView.setImageResource(R.drawable.promo2);
+                break;
+        }
     }
 
     @Override
     public int getItemCount() {
-        return drawables.length;
+        return 2;
     }
 
     public void setOnClickListener(View.OnClickListener listener){

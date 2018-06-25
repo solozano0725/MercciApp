@@ -10,7 +10,6 @@ public class VHPromo extends RecyclerView.ViewHolder{
 
     ImageView imageView;
 
-
     public VHPromo(View itemView) {
         super(itemView);
         imageView = (ImageView) itemView.findViewById(R.id.imgP);
