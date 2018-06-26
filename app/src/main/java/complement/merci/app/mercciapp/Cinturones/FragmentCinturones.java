@@ -40,7 +40,6 @@ public class FragmentCinturones extends Fragment {
         rv.setLayoutManager(new GridLayoutManager(getContext().getApplicationContext(), 2));
         return view;
 
-
     }
 
 }
