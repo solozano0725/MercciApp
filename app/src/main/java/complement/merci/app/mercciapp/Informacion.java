@@ -1,24 +1,24 @@
 package complement.merci.app.mercciapp;
 
-public class Informacion {
+import java.io.Serializable;
+
+public class Informacion implements Serializable {
 
     private String titleClass;
-    private int img;
+    private int[] img;
     private String ref;
     private String nameI;
     private String colorI;
-    private String priceI;
+    private double priceI;
     private String descI;
-    private int cantI;
 
-    public Informacion(String titleClass, int img, String ref, String nameI, String colorI, String descI, String priceI, int cantI) {
+    public Informacion(String titleClass, int[] img, String ref, String nameI, String colorI, String descI, double priceI) {
         this.titleClass = titleClass;
         this.img = img;
         this.ref = ref;
         this.nameI = nameI;
         this.colorI = colorI;
         this.priceI = priceI;
-        this.cantI = cantI;
         this.descI = descI;
     }
 
@@ -30,11 +30,11 @@ public class Informacion {
         this.titleClass = titleClass;
     }
 
-    public int getImg() {
+    public int[] getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(int[] img) {
         this.img = img;
     }
 
@@ -62,20 +62,12 @@ public class Informacion {
         this.colorI = colorI;
     }
 
-    public String getPriceI() {
+    public double getPriceI() {
         return priceI;
     }
 
-    public void setPriceI(String priceI) {
+    public void setPriceI(double priceI) {
         this.priceI = priceI;
-    }
-
-    public int getCantI() {
-        return cantI;
-    }
-
-    public void setCantI(int cantI) {
-        this.cantI = cantI;
     }
 
     public String getDescI() {
