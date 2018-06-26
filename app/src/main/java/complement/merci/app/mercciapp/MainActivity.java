@@ -21,6 +21,7 @@ import com.valdesekamdem.library.mdtoast.MDToast;
 
 import complement.merci.app.mercciapp.BolsosCarteras.FragmentBolsos;
 import complement.merci.app.mercciapp.BolsosCarteras.FragmentCarteras;
+import complement.merci.app.mercciapp.Cinturones.FragmentCinturones;
 import complement.merci.app.mercciapp.Main.RVMain;
 import complement.merci.app.mercciapp.Promo.FragmentPromociones;
 

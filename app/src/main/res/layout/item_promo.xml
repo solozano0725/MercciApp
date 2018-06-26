@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardViewP"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="200dp"
+    android:layout_margin="10dp"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp"
     app:contentPadding="5dp">
