@@ -24,6 +24,7 @@ import complement.merci.app.mercciapp.BolsosCarteras.FragmentCarteras;
 import complement.merci.app.mercciapp.Cinturones.FragmentCinturones;
 import complement.merci.app.mercciapp.Main.RVMain;
 import complement.merci.app.mercciapp.Promo.FragmentPromociones;
+import complement.merci.app.mercciapp.Shopping.FragmentShop;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -56,9 +57,36 @@ public class MainActivity extends AppCompatActivity
         imgE = findViewById(R.id.imgEmail);
 
         rv = findViewById(R.id.rvM);
-        rv.setAdapter(new RVMain(getApplicationContext()));
+        RVMain adapter = new RVMain(getApplicationContext());
+        rv.setAdapter(adapter);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int pos = rv.getChildLayoutPosition(v);
+                switch (pos){
+                    case 0:
+                        if(count>0){
+                            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new FragmentBolsos()).addToBackStack(null).commit();
+                        } else{
+                            getSupportFragmentManager().beginTransaction().add(R.id.content_main, new FragmentBolsos()).addToBackStack(null).commit();
+                        }
+                        break;
+                    case 1:
+                        if(count>0){
+                            getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new FragmentPromociones()).addToBackStack(null).commit();
+                        } else{
+                            getSupportFragmentManager().beginTransaction().add(R.id.content_main, new FragmentPromociones()).addToBackStack(null).commit();
+                        }
+                        break;
+                    case 2:
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.ig))));
+                        break;
+                }
+            }
+        });
 
         imgF.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,6 +174,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_nosotros) {
             count++;
             fragment = new FragmentNosotros();
+        } else if (id == R.id.nav_compra) {
+            count++;
+            fragment = new FragmentShop();
         }
 
         if(count>0){

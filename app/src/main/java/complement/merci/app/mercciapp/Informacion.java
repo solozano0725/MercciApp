@@ -11,8 +11,9 @@ public class Informacion implements Serializable {
     private String colorI;
     private double priceI;
     private String descI;
+    private int cantI;
 
-    public Informacion(String titleClass, int[] img, String ref, String nameI, String colorI, String descI, double priceI) {
+    public Informacion(String titleClass, int[] img, String ref, String nameI, String colorI, String descI, double priceI, int cantI) {
         this.titleClass = titleClass;
         this.img = img;
         this.ref = ref;
@@ -20,6 +21,7 @@ public class Informacion implements Serializable {
         this.colorI = colorI;
         this.priceI = priceI;
         this.descI = descI;
+        this.cantI = cantI;
     }
 
     public String getTitleClass() {
@@ -76,5 +78,13 @@ public class Informacion implements Serializable {
 
     public void setDescI(String descI) {
         this.descI = descI;
+    }
+
+    public int getCantI() {
+        return cantI;
+    }
+
+    public void setCantI(int cantI) {
+        this.cantI = cantI;
     }
 }

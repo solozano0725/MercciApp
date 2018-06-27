@@ -97,4 +97,22 @@
     <string name="color">COLOR:</string>
     <string name="cantidad">CANTIDAD</string>
     <string name="_1">1</string>
+    <string name="plus">PLUS</string>
+    <string name="minus">MINUS</string>
+
+    <string name="combinado">COMBINADO</string>
+    <string name="descripBolsosNaus">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, las combinaciones tricolores y los detalles modernos en el diseño de este bolso lo hace la elección acertada, su tamaño es de  30X44 , los materiales son sintéticos , vistas de cremallera con cremallera de cobre , bolsillo interino picado.</string>
+    <string name="descripBolsoPolim">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, las combinaciones tricolores y los detalles modernos en el diseño de este bolso lo hace la elección acertada, su tamaño es de  32 X44 , los materiales son sintéticos , vistas de cremallera con cremallera de cobre , bolsillo interino picado.</string>
+    <string name="descripCarteraNaus">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, las combinaciones tricolores y los detalles modernos en el diseño de esta cartera la hace la elección acertada, su tamaño es de  22 X 27 , hecho totalmente en cuero  , con dos cuadrantes circulares de zamak , una hebilla de zamak en la bandolera  , broche de imán dorado en la tapa, vistas de cremallera, bolsillo interino picado.</string>
+    <string name="descripCarteraPolim">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, las combinaciones tricolores y los detalles modernos en el diseño de esta cartera la hace la elección acertada, su tamaño es de  21 X27 , los materiales son sintéticos , con dos cuadrantes circulares de zamak , cadena de fantasía dorada , broche de imán dorado en la tapa , vistas de cremallera, bolsillo interino picado.</string>
+    <string name="descripCinturonAzul">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, se diseño este cinturón  en cuero color azul tuqui con un tamaño de 2 cm x 105 cm que tiene una hebilla dorada de zamak. </string>
+    <string name="descripCinturonBlanco">Esta colección está dedicada a las mujeres arriesgadas , gracias a su personalidad y carácter innovador, se diseño este cinturón en material sintetico color plata con un tamaño de 2 cm x 105 cm que tiene una hebilla dorada de fantasía.</string>
+
+
+    <string name="carrito_de_compras">CARRITO DE COMPRAS</string>
+    <string name="a_calcular">A Calcular</string>
+    <string name="finalizar_compra">Finalizar Compra</string>
+    <string name="escoger_mas_productos">Escoger Mas Productos</string>
+    <string name="total">TOTAL:</string>
+    <string name="valor_envio">VALOR ENVIO:</string>
 </resources>
